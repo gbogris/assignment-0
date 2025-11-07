@@ -11,15 +11,15 @@
 
 
 {
-	double n1;
+	double n1;   /* Calculations with only 2 integers(n1,n2) */
 	double n2;
-	char x;
+	char x;      /* x equals every single operator(+, -, /, *, ^) */
 
    printf("Give me the first opernad: ");
 	if ( scanf(" %lf", &n1) !=1  || n1 != (int)n1 )
 	{
 
-		printf("Only integer operands are acceptable!\n");
+		printf("Only integer operands are acceptable!\n"); /* n1 has to be an integer */
 
 		return 1;
 	}
@@ -31,7 +31,7 @@
 		return 1;
 	}
    printf("Give me the second opernad: ");
-	if (scanf(" %lf", &n2) !=1  || n2 != (int)n2 )
+	if (scanf(" %lf", &n2) !=1  || n2 != (int)n2 ) /* n2 has to be an integer */
 	{
 		printf("Only integer operands are acceptable!\n");
 		return 1;
@@ -41,21 +41,21 @@
  if ( x == '+' )
 
 	{
-		printf("%f + %f= %f\n", n1, n2, n1+n2);
+		printf("%f + %f= %f\n", n1, n2, n1+n2); /* Calculations with the '+' operator */
 
 	}
 
   else if ( x == '-' )
 
 	{
-		printf("%f - %f= %f\n", n1, n2, n1-n2);
+		printf("%f - %f= %f\n", n1, n2, n1-n2); /*  Calculations with the '-' operator */
 
 	}
 
   else if ( x == '*' )
 
 	{
-		printf(" %f * %f= %f\n", n1, n2, n1*n2);
+		printf(" %f * %f= %f\n", n1, n2, n1*n2); /*  Calculations with the '*' operator */
 
 	}
 
@@ -64,11 +64,11 @@
 	{
   if( n2 == 0)
 	{
-		printf("Division with zero is undefined!\n");
+		printf("Division with zero is undefined!\n"); /* Error in division */
 	}
   else 
 	{
-		printf(" %f / %f= %f\n", n1, n2, n1/n2);
+		printf(" %f / %f= %f\n", n1, n2, n1/n2); /*  Calculations with the '/' operator */
 	}
 	}
   else if ( x == '^' )
@@ -78,7 +78,7 @@
   if( n1 == 0 && n2 == 0)
 
 	{
-		printf("I do not know the answer!\n");
+		printf("I do not know the answer!\n"); /* Error in 0 raised to the power of 0 */
 
 	}
 
@@ -87,7 +87,7 @@
 	{
 
 	double math = pow(n1,n2);
-	printf("%f ^ %f= %f\n", n1, n2, math);
+	printf("%f ^ %f= %f\n", n1, n2, math);            /*  Calculations with the '^' operator */
 
 	}
 
